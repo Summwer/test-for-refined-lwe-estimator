@@ -1,0 +1,11 @@
+Cython==0.29.36
+cysignals
+flake8
+ipython
+numpy
+begins
+pytest
+requests
+scipy
+multiprocessing-logging
+matplotlib

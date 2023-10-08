@@ -1,0 +1,10 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: g6k-kernel
+Description: lattice algorithms with floating-point computations
+Version: 0.1.2
+Cflags: -pthread  -O3 -march=native -Wp,-U_FORTIFY_SOURCE  -mmmx -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -maes -mavx -mfma -mavx2
+Libs: -lpthread  
