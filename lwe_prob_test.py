@@ -392,3 +392,5 @@ test_dsvp(n , alpha, blocksizes, dsvp)
 n , alpha, blocksizes, dsvp = 45, 0.010, list(range(10,50)), 94
 test_dsvp(n , alpha, blocksizes, dsvp)
 
+n , alpha, blocksizes, dsvp = 60, 0.005, list(range(10,50)), 104
+test_dsvp(n , alpha, blocksizes, dsvp)
