@@ -32,6 +32,7 @@ from fpylll.util import gaussian_heuristic
 from g6k.algorithms.bkz import default_dim4free_fun
 from g6k.utils.util import load_lwe_challenge
 from six.moves import range
+from random import randint
 
 
 def delta_0f(k):

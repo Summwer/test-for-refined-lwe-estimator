@@ -4,11 +4,11 @@
 {
     "distutils": {
         "depends": [
-            "/home/summer/test-for-lwe-estimator-test/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h",
-            "/home/summer/test-for-lwe-estimator-test/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/arrayscalars.h",
-            "/home/summer/test-for-lwe-estimator-test/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h",
-            "/home/summer/test-for-lwe-estimator-test/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h",
-            "/home/summer/test-for-lwe-estimator-test/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ufuncobject.h",
+            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h",
+            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/arrayscalars.h",
+            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h",
+            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h",
+            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ufuncobject.h",
             "g6k-env/lib/python3.8/site-packages/cysignals/macros.h",
             "g6k-env/lib/python3.8/site-packages/cysignals/struct_signals.h",
             "kernel/siever.h"
@@ -44,7 +44,7 @@
         "include_dirs": [
             "./g6k",
             "g6k-env/lib/python3.8/site-packages/cysignals",
-            "/home/summer/test-for-lwe-estimator-test/g6k-env/lib/python3.8/site-packages/numpy/core/include"
+            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include"
         ],
         "language": "c++",
         "libraries": [

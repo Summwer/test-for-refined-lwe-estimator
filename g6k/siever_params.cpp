@@ -36,7 +36,7 @@
         ],
         "include_dirs": [
             "./g6k",
-            "/home/summer/test-for-lwe-estimator-test/g6k-env/lib/python3.8/site-packages/numpy/core/include"
+            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include"
         ],
         "language": "c++",
         "libraries": [
