@@ -218,24 +218,24 @@ CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/g6k_config.h.in \
 	$(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/summer/test-for-lwe-estimator-test/missing aclocal-1.16
+ACLOCAL = ${SHELL} /home/summer/lattice-experiments/test-for-refined-lwe-estimator/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
-AUTOCONF = ${SHELL} /home/summer/test-for-lwe-estimator-test/missing autoconf
-AUTOHEADER = ${SHELL} /home/summer/test-for-lwe-estimator-test/missing autoheader
-AUTOMAKE = ${SHELL} /home/summer/test-for-lwe-estimator-test/missing automake-1.16
+AUTOCONF = ${SHELL} /home/summer/lattice-experiments/test-for-refined-lwe-estimator/missing autoconf
+AUTOHEADER = ${SHELL} /home/summer/lattice-experiments/test-for-refined-lwe-estimator/missing autoheader
+AUTOMAKE = ${SHELL} /home/summer/lattice-experiments/test-for-refined-lwe-estimator/missing automake-1.16
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS =  -O3 -march=native -Wp,-U_FORTIFY_SOURCE
+CFLAGS = -g -O2
 CPP = gcc -E
 CPPFLAGS = 
 CPUEXT_FLAGS =  -mrdrnd -mbmi -mbmi2 -madx -mmpx -mabm
 CXX = g++ -std=c++11
 CXXCPP = g++ -E -std=c++11
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS =  -O3 -march=native -Wp,-U_FORTIFY_SOURCE  -mmmx -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -maes -mavx -mfma -mavx2
+CXXFLAGS = -Ofast -ftree-vectorize -funroll-loops -Wall -Wextra  -mmmx -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -maes -mavx -mfma -mavx2  -mmmx -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -maes -mavx -mfma -mavx2
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -268,7 +268,7 @@ LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = 
-MAKEINFO = ${SHELL} /home/summer/test-for-lwe-estimator-test/missing makeinfo
+MAKEINFO = ${SHELL} /home/summer/lattice-experiments/test-for-refined-lwe-estimator/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -295,10 +295,10 @@ SHELL = /bin/bash
 SIMD_FLAGS =  -mmmx -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -maes -mavx -mfma -mavx2
 STRIP = strip
 VERSION = 0.1.2
-abs_builddir = /home/summer/test-for-lwe-estimator-test/kernel
-abs_srcdir = /home/summer/test-for-lwe-estimator-test/kernel
-abs_top_builddir = /home/summer/test-for-lwe-estimator-test
-abs_top_srcdir = /home/summer/test-for-lwe-estimator-test
+abs_builddir = /home/summer/lattice-experiments/test-for-refined-lwe-estimator/kernel
+abs_srcdir = /home/summer/lattice-experiments/test-for-refined-lwe-estimator/kernel
+abs_top_builddir = /home/summer/lattice-experiments/test-for-refined-lwe-estimator
+abs_top_srcdir = /home/summer/lattice-experiments/test-for-refined-lwe-estimator
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -329,7 +329,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/summer/test-for-lwe-estimator-test/install-sh
+install_sh = ${SHELL} /home/summer/lattice-experiments/test-for-refined-lwe-estimator/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale

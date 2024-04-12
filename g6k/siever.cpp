@@ -4,11 +4,11 @@
 {
     "distutils": {
         "depends": [
-            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h",
-            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/arrayscalars.h",
-            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h",
-            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h",
-            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ufuncobject.h",
+            "/home/summer/lattice-experiments/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h",
+            "/home/summer/lattice-experiments/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/arrayscalars.h",
+            "/home/summer/lattice-experiments/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h",
+            "/home/summer/lattice-experiments/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h",
+            "/home/summer/lattice-experiments/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include/numpy/ufuncobject.h",
             "g6k-env/lib/python3.8/site-packages/cysignals/macros.h",
             "g6k-env/lib/python3.8/site-packages/cysignals/struct_signals.h",
             "kernel/siever.h"
@@ -16,9 +16,22 @@
         "extra_compile_args": [
             "-std=c++11",
             "-pthread",
-            "-O3",
-            "-march=native",
-            "-Wp,-U_FORTIFY_SOURCE",
+            "-Ofast",
+            "-ftree-vectorize",
+            "-funroll-loops",
+            "-Wall",
+            "-Wextra",
+            "-mmmx",
+            "-msse",
+            "-msse2",
+            "-msse3",
+            "-mssse3",
+            "-msse4.1",
+            "-msse4.2",
+            "-maes",
+            "-mavx",
+            "-mfma",
+            "-mavx2",
             "-mmmx",
             "-msse",
             "-msse2",
@@ -44,7 +57,7 @@
         "include_dirs": [
             "./g6k",
             "g6k-env/lib/python3.8/site-packages/cysignals",
-            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include"
+            "/home/summer/lattice-experiments/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include"
         ],
         "language": "c++",
         "libraries": [

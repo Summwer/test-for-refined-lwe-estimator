@@ -155,7 +155,7 @@ def pump(g6k, tracer, kappa, blocksize, dim4free, down_sieve=False,             
                     break
 
             if goal_r0 is not None and (g6k.M.get_r(kappa, kappa) <= goal_r0):
-                return
+                return g6k.n
 
             # Pump Down
             pump.phase = "down"
@@ -178,3 +178,4 @@ def pump(g6k, tracer, kappa, blocksize, dim4free, down_sieve=False,             
                     g6k.resize_db(max(500, g6k.db_size() / g6k.params.db_size_base))
                 elif not wrapped_sieve(pump):
                     break
+    return blocksize-dim4free

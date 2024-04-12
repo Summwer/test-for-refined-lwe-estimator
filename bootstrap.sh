@@ -107,7 +107,7 @@ $PIP install -r requirements.txt
 $PIP install -r suggestions.txt
 $PYTHON setup.py clean
 $PYTHON setup.py build_ext $jobs || $PYTHON setup.py build_ext
-$PYTHON setup.py install
+$PYTHON -m pip install .
 cd ..
 
 # Build G6K

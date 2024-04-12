@@ -216,7 +216,7 @@ def cum_prob_and_prob_pump_estimation(rr,q, alpha, cum_prob = 0., succ_prob = 0.
 
 
 #pump estimation cum previous failure probability
-def pro_sieve_estimation_20230609(rr,q, alpha, succ_prob = 0.999):
+def pro_sieve_estimation_20230609(rr,q, alpha, cum_prob = 0., succ_prob = 0.999):
 # def pump_estimation2(log_rr,q, alpha, succ_prob = 0.99, ebeta = 50, goal_margin=1.5):
     """
     Return min pump time cost estimate according to progressive sieve following [Duc18]
@@ -231,29 +231,46 @@ def pro_sieve_estimation_20230609(rr,q, alpha, succ_prob = 0.999):
     d=len(rr)
     pre_psvp2 = 0.
     cum_pump_time  = 0.
-    beta = 50
+    beta = 30
     flag1 = False
     flag2 = False
+    
+    dsvps = []
+    dsvp_probs = []
+    d4f_probs = []
+    
+    prob1 = 0.
+    prob2 = 0.
+    
     while(beta <= d):
         GH = gaussian_heuristic(rr[d-beta:])
         length=(GH/(sigma**2))
         psvp1 = chdtr(beta, length)
         psvp2 = chdtr(beta, 4/3.*length)
         # cum_pump_time += get_pump_time(beta,d) *(psvp2-pre_psvp2)
-        if(psvp1 > succ_prob and not flag1):
+        
+        prob1 = cum_prob + (1 - cum_prob)* psvp1
+        prob2 = cum_prob + (1 - cum_prob)* psvp2
+        
+        if(prob1 > succ_prob and not flag1):
             dsvp1 = beta
             flag1 = True
-        if(psvp2 > succ_prob and not flag2):
+        if(prob2 > succ_prob and not flag2):
             dsvp2 = beta
             flag2 = True
         if(flag1 and flag2):
             break
-        pre_psvp2 = psvp2
+        # pre_psvp2 = psvp2
+        
+        dsvps.append(beta)
+        dsvp_probs.append(prob1)
+        d4f_probs.append(prob2)
         
         beta +=1
 
-    llb = d - dsvp1
-    f = dsvp1 - dsvp2
-    llb = max(0, llb)
+    # llb = d - dsvp1
+    # f = dsvp1 - dsvp2
+    # llb = max(0, llb)
 
-    return llb,f#,GH
+    # return llb,f#,GH
+    return dsvps,dsvp_probs,d4f_probs

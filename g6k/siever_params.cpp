@@ -9,9 +9,22 @@
         "extra_compile_args": [
             "-std=c++11",
             "-pthread",
-            "-O3",
-            "-march=native",
-            "-Wp,-U_FORTIFY_SOURCE",
+            "-Ofast",
+            "-ftree-vectorize",
+            "-funroll-loops",
+            "-Wall",
+            "-Wextra",
+            "-mmmx",
+            "-msse",
+            "-msse2",
+            "-msse3",
+            "-mssse3",
+            "-msse4.1",
+            "-msse4.2",
+            "-maes",
+            "-mavx",
+            "-mfma",
+            "-mavx2",
             "-mmmx",
             "-msse",
             "-msse2",
@@ -36,7 +49,7 @@
         ],
         "include_dirs": [
             "./g6k",
-            "/home/summer/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include"
+            "/home/summer/lattice-experiments/test-for-refined-lwe-estimator/g6k-env/lib/python3.8/site-packages/numpy/core/include"
         ],
         "language": "c++",
         "libraries": [
