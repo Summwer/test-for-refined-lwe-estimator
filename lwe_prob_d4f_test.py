@@ -327,8 +327,8 @@ def one_dsvp_tour(parallel_param):
     slopes = []
     while(i < tours):
         print("dsvp = %d, %d/%d" %(dsvp,i+1,tours))
-        data = None
-        while(data is None and i < tours):
+        data = [None,None]
+        while(data[0] is None and i < tours):
             data = preprocess(n,alpha, blocksizes)
             if(data[0] is None): #it means it succeed in BKZ process
                 succ_times += 1
